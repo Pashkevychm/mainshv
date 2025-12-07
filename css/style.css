@@ -2,6 +2,12 @@ header {
     background-color:#edecec;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
 section {
     padding: 40px 0;
 }
@@ -47,10 +53,10 @@ img{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #dedede;
     padding: 15px 20px;
     border-radius: 8px;
-    background-color: #dcdcdc;
+    background-color: #c8c8c8;
 
 }
 
@@ -63,5 +69,11 @@ img{
 .btn-p{
     background-color: rgb(195, 195, 195);
     border: none;
-    border-radius:10%;
+    transform: none;
+    cursor: pointer;
+    box-shadow: none;
+    transition-property: transform, box-shadow;
+    transition-duration: .5s;
+    border-radius:5%;
+    box-shadow: 2px 2px 2px rgb(175, 175, 175);
 }
