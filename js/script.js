@@ -1,22 +1,31 @@
 let products =[ 
     {
         id:1,
-        name: "iphone17 pro",
-        image: "https://istop.ua/wp-content/uploads/2023/11/apple-airpods-max-silver-mgyj3.1000x1000.jpeg",
-        description: "gjne;ybq ntktajy",
-        type: "phone",
-        prise:20000
-    },
-    {
-        id:1,
-        name: "airpods pro",
+        name: "iPhone17 pro",
         image: "https://swipe.ua/content/images/32/536x536l50nn0/83139999207797.png",
         description: "gjne;ybq ntktajy",
-        type: "headphone",
-        prise:20000
+        type: "phone",
+        prise:88000
     },
+    {
+        id:2,
+        name: "airpods pro",
+        image: "https://istop.ua/wp-content/uploads/2023/11/apple-airpods-max-silver-mgyj3.1000x1000.jpeg",
+        description: "gjne;ybq ntktajy",
+        type: "headphone",
+        prise:29999
+    },
+       {
+        id:3,
+        name: "Apple Watch",
+        image: "https://images.prom.ua/6953708158_w640_h640_smart-godinnik-apple-watch.jpg",
+        description: "gjne; ntktajy",
+        type: "clock",
+        prise:13000
+    }
 ];
-let cart =[];
+let cart =JSON.parse(localStorage.getItem('cart')) || [];
+
 let productsContainer = document.querySelector(".products-div")
 let btnGroup = document.querySelector(".btn-group")
 
@@ -49,17 +58,22 @@ function applyFiles(categoryType){
     }
 }
 function addToCard(productId){
-    let product = products.find(p => p.id == productId);
-    if(product){
-        cart.push(product);
-        alert("товар додано" + product.name)
+    let cartProduct = cart.find(p => p.id == productId);
+    if(cartProduct){
+        cartProduct.quantity +=1;
     }
+    else {
+        let product = products.find (p => p.id == productId);
+        cart.push({...product,quantity: 1});
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert("товар додано")
 }
-
 let productsMap = {
     "всі": "all",
-    "телефон":"pohone",
-    "навушники":"headphone"
+    "телефон":"phone",
+    "навушники":"headphone",
+    "годинник":"clock",
 }
 
 function stupFilterButtons(){
