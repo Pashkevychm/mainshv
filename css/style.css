@@ -77,3 +77,45 @@ img{
     border-radius:5%;
     box-shadow: 2px 2px 2px rgb(175, 175, 175);
 }
+
+.btn-p:hover{
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+    position: relative;
+    top: 2px;
+    background-color: #edecec;
+}
+
+
+
+
+.order-btn{
+    display:flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border: none; 
+    padding: 6px 9px; 
+    border-radius: 5px; 
+    background-color: #c8c8c8; 
+    transition-property: transform, box-shadow;
+    transition-duration: .5s;
+    border-radius:5%
+
+}
+
+.order-btn:hover{
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+    position: relative;
+    bottom: 2px;
+    background-color: #edecec;
+}
+
+
+
+.product:hover{
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+    position: relative;
+    bottom: 3px;
+    transition-property: transform, box-shadow;
+    transition-duration: .5s;
+    border-radius:5%
+}

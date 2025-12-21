@@ -1,13 +1,13 @@
 let cartContainer = document.querySelector('.cart-products');
-let totalElemnt = document.querySelector('.total-prise-display');
+let totalElemnt = document.querySelector('.total-price-display');
 
 let cart =JSON.parse(localStorage.getItem('cart')) || [];
 
 function renderCart(){
     cartContainer.innerHTML = "";
-    if(cart.lenght ==0){
+    if(cart.length ==0){
         cartContainer.innerHTML = '<p>Ваш кошик порожній</p>';
-        totalElement.innerText = "0 UAH";
+        totalElemnt.innerText = "0 UAH";
         return;
     }
     cart.forEach(function(item) {
@@ -16,7 +16,7 @@ let html = `
             <div class="cart-product" data-id="${item.id}">
                 <div class="info-box">
                     <h3>${item.name}</h3>
-                    <p class="product-price">${item.price} грн</p>
+                    <p class="product-price">${item.prise} грн</p>
                 </div>
                 
                 <div class="count-box">
@@ -25,7 +25,7 @@ let html = `
                 </div>
                 
                 <div class="total-box">
-                    ${item.price * item.quantity} грн
+                    ${item.prise * item.quantity} грн
                 </div>
                 
                 <button class="btn btn-danger remove-btn">Видалити</button>
@@ -62,8 +62,8 @@ cartContainer.addEventListener('click', (event) => {
 });
 
 cartContainer.addEventListener('input', (event)=> {
-    if(event.target.classList.contains('.quantity-input')) {
-        let input = even.target;
+    if(event.target.classList.contains('quantity-input')) {
+        let input = event.target;
         let parent = input.closest('.cart-product');
         let id = parseInt(parent.dataset.id);
         let newQuantity = parseInt(input.value)

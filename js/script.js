@@ -1,3 +1,4 @@
+
 let products =[ 
     {
         id:1,
@@ -43,7 +44,7 @@ function renderProducts(items){
                     alt="" class="product-img">
                 <h3 class="product-title">${item.name} 1</h3>
                 <p class = "product-prise">${item.description}</p>
-                <button type="button" class="btn btn-p">Додати до кошику</button>
+                <button type="button" class="btn btn-p add-to-cart-btn">Додати до кошику</button>
             </article>
         `
         productsContainer.innerHTML +=productHTML
@@ -73,7 +74,6 @@ let productsMap = {
     "всі": "all",
     "телефон":"phone",
     "навушники":"headphone",
-    "годинник":"clock",
 }
 
 function stupFilterButtons(){
@@ -87,7 +87,7 @@ function stupFilterButtons(){
 
 productsContainer.addEventListener("click", function(event){
     if (event.target.classList.contains('add-to-cart-btn')) {
-        let productCard = event.target.closeset('products')
+        let productCard = event.target.closest('.card')
         let productId = parseInt(productCard.dataset.id)
         addToCard(productId)
     }
