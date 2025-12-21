@@ -2,6 +2,10 @@ header {
     background-color:#edecec;
 }
 
+h1, h2 {
+    margin: 20px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -43,14 +47,15 @@ img{
     margin-bottom: 15px;
 }
 
-.card-products{
+.cart-products{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
     margin-bottom: 30px;
 }
-.card-products{
+.cart-product{
     display:flex;
+    /* flex-direction: column; */
     justify-content: space-between;
     align-items: center;
     border: 1px solid #dedede;
@@ -64,6 +69,12 @@ img{
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.total-box {
+    font-size: 25px;
+    margin: 10px;
+
 }
 
 .btn-p{
@@ -106,10 +117,12 @@ img{
     box-shadow: 5px 5px 5px rgb(161, 161, 161);
     position: relative;
     bottom: 2px;
-    background-color: #edecec;
+    background-color: #ddffd4;
 }
 
-
+.product{
+    padding: 20px;
+}
 
 .product:hover{
     box-shadow: 5px 5px 5px rgb(161, 161, 161);
@@ -118,4 +131,17 @@ img{
     transition-property: transform, box-shadow;
     transition-duration: .5s;
     border-radius:5%
+}
+
+.remove-btn:hover{
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+    position: relative;
+    bottom: 3px;
+    transition-property: transform, box-shadow;
+    transition-duration: .2s;
+
+}
+
+input {
+    border-radius: 5px;
 }

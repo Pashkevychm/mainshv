@@ -4,7 +4,7 @@ let products =[
         id:1,
         name: "iPhone17 pro",
         image: "https://swipe.ua/content/images/32/536x536l50nn0/83139999207797.png",
-        description: "gjne;ybq ntktajy",
+        description: "",
         type: "phone",
         prise:88000
     },
@@ -12,7 +12,7 @@ let products =[
         id:2,
         name: "airpods pro",
         image: "https://istop.ua/wp-content/uploads/2023/11/apple-airpods-max-silver-mgyj3.1000x1000.jpeg",
-        description: "gjne;ybq ntktajy",
+        description: "",
         type: "headphone",
         prise:29999
     },
@@ -20,7 +20,7 @@ let products =[
         id:3,
         name: "Apple Watch",
         image: "https://images.prom.ua/6953708158_w640_h640_smart-godinnik-apple-watch.jpg",
-        description: "gjne; ntktajy",
+        description: "",
         type: "clock",
         prise:13000
     }
